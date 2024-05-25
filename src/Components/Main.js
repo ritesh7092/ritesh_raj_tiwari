@@ -4,7 +4,7 @@ import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
- function Main() {
+function Main() {
     const particlesInit = useCallback(async engine => {
         console.log(engine);
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -17,85 +17,84 @@ import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSli
     const particlesLoaded = useCallback(async container => {
         await console.log(container);
     }, []);
-   return (
-     <div className="max-h-screen">
-        <Particles
-            id="tsparticles"
-            init={particlesInit}
-            loaded={particlesLoaded}
-            options={{
-                background: {
-                    color: {
-                        value: "#ffffff",   
-                    },
-                },
-                fpsLimit: 120,
-                interactivity: {
-                    events: {
-                        onClick: {
-                            enable: false,
-                            mode: "push",
+    return (
+        <div className="max-h-screen">
+            <Particles
+                id="tsparticles"
+                init={particlesInit}
+                loaded={particlesLoaded}
+                options={{
+                    background: {
+                        color: {
+                            value: "#ffffff",
                         },
-                        onHover: {
+                    },
+                    fpsLimit: 120,
+                    interactivity: {
+                        events: {
+                            onClick: {
+                                enable: false,
+                                mode: "push",
+                            },
+                            onHover: {
+                                enable: true,
+                                mode: "repulse",
+                            },
+                            resize: true,
+                        },
+                        modes: {
+                            push: {
+                                quantity: 4,
+                            },
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4,
+                            },
+                        },
+                    },
+                    particles: {
+                        color: {
+                            value: "#ea580c",
+                        },
+                        links: {
+                            color: "#ea580c",
+                            distance: 150,
                             enable: true,
-                            mode: "repulse",
+                            opacity: 0.5,
+                            width: 1,
                         },
-                        resize: true,
-                    },
-                    modes: {
-                        push: {
-                            quantity: 4,
-                        },
-                        repulse: {
-                            distance: 200,
-                            duration: 0.4,
-                        },
-                    },
-                },
-                particles: {
-                    color: {
-                        value: "#ea580c",
-                    },
-                    links: {
-                        color: "#ea580c",
-                        distance: 150,
-                        enable: true,
-                        opacity: 0.5,
-                        width: 1,
-                    },
-                    move: {
-                        direction: "none",
-                        enable: true,
-                        outModes: {
-                            default: "bounce",
-                        },
-                        random: false,
-                        speed: 3,
-                        straight: false,
-                    },
-                    number: {
-                        density: {
+                        move: {
+                            direction: "none",
                             enable: true,
-                            area: 800,
+                            outModes: {
+                                default: "bounce",
+                            },
+                            random: false,
+                            speed: 3,
+                            straight: false,
                         },
-                        value: 80,
+                        number: {
+                            density: {
+                                enable: true,
+                                area: 800,
+                            },
+                            value: 80,
+                        },
+                        opacity: {
+                            value: 0.5,
+                        },
+                        shape: {
+                            type: "square",
+                        },
+                        size: {
+                            value: { min: 1, max: 5 },
+                        },
                     },
-                    opacity: {
-                        value: 0.5,
-                    },
-                    shape: {
-                        type: "square",
-                    },
-                    size: {
-                        value: { min: 1, max: 5 },
-                    },
-                },
-                detectRetina: true,
-            }}
-        />
-     </div>
-   )
- }
- 
- export default Main
- 
+                    detectRetina: true,
+                }}
+            />
+        </div>
+    )
+}
+
+export default Main
