@@ -1,19 +1,129 @@
-.element{
+.element {
   animation-name: float;
   animation-duration: 2s;
-  animation-iteration-count:infinite;
+  animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
+
+
 @keyframes float {
-  0%{
+  0% {
     transform: translateY(0);
   }
-  50%{
+  50% {
     transform: translateY(-10px);
   }
-  100%{
+  100% {
     transform: translateY(0);
   }
-  
+}
+
+/* App.css */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards; /* Adjust duration and timing as needed */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden; /* Ensures the text is hidden until animated */
+  white-space: nowrap; /* Prevents wrapping */
+  border-right: 2px solid orange; /* Cursor effect */
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite; /* Typing effect */
+}
+
+.text-orange {
+  color: #c65d00; /* Deep orange color */
+}
+
+
+.text-gradient {
+  background: linear-gradient(45deg, #ff6b6b, #ffcc00); /* Deep red to bright yellow gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Makes the text fill with the gradient */
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hero-subtext-animation {
+  animation: bounceIn 1s ease forwards; /* Adjust duration and timing as needed */
+}
+
+
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg); /* Start rotated */
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotateX(-20deg); /* Slightly tilt */
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0); /* End normal */
+  }
+}
+
+.hero-flip-animation {
+  animation: flipIn 1s ease forwards; /* Adjust duration and timing as needed */
+}
+
+
+
+.gradient-animation {
+  background: linear-gradient(90deg, #FF6B00, #FFB200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 2s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }

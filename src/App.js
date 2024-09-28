@@ -1,5 +1,6 @@
 import './App.css';
 import About from './Components/About';
+import Achievements from './Components/Achievements';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import Main from './Components/Main';
@@ -25,6 +26,7 @@ function App() {
 
      <div className='flex flex-col relative bg-white'>
         <OverView/>
+        <Achievements/>
         <Projects/>
         <Contact/>  
         <Footer/>

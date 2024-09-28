@@ -1,22 +1,18 @@
 import React from "react";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
-//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import { loadSlim } from "tsparticles-slim";
 
 function Main() {
-    const particlesInit = useCallback(async engine => {
+    const particlesInit = useCallback(async (engine) => {
         console.log(engine);
-        // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
-        //await loadFull(engine);
         await loadSlim(engine);
     }, []);
 
-    const particlesLoaded = useCallback(async container => {
+    const particlesLoaded = useCallback(async (container) => {
         await console.log(container);
     }, []);
+
     return (
         <div className="max-h-screen">
             <Particles
@@ -26,7 +22,7 @@ function Main() {
                 options={{
                     background: {
                         color: {
-                            value: "#ffffff",
+                            value: "#0f172a", // Dark navy blue background
                         },
                     },
                     fpsLimit: 120,
@@ -54,13 +50,13 @@ function Main() {
                     },
                     particles: {
                         color: {
-                            value: "#ea580c",
+                            value: "#ffcc00", // Bright yellow particles
                         },
                         links: {
-                            color: "#ea580c",
+                            color: "#ffcc00", // Bright yellow links
                             distance: 150,
                             enable: true,
-                            opacity: 0.5,
+                            opacity: 0.6, // Slightly more opaque links for visibility
                             width: 1,
                         },
                         move: {
@@ -70,7 +66,7 @@ function Main() {
                                 default: "bounce",
                             },
                             random: false,
-                            speed: 3,
+                            speed: 4, // Slightly faster speed for more dynamic movement
                             straight: false,
                         },
                         number: {
@@ -81,20 +77,20 @@ function Main() {
                             value: 80,
                         },
                         opacity: {
-                            value: 0.5,
+                            value: 0.6, // Increased opacity for a more solid look
                         },
                         shape: {
-                            type: "square",
+                            type: "circle", // Changed shape to circle for a softer look
                         },
                         size: {
-                            value: { min: 1, max: 5 },
+                            value: { min: 2, max: 8 }, // Adjusted size range for more variability
                         },
                     },
                     detectRetina: true,
                 }}
             />
         </div>
-    )
+    );
 }
 
-export default Main
+export default Main;
