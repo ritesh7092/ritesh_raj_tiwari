@@ -26,8 +26,8 @@ function App() {
 
      <div className='flex flex-col relative bg-white'>
         <OverView/>
-        <Achievements/>
         <Projects/>
+        <Achievements/>
         <Contact/>  
         <Footer/>
      </div>

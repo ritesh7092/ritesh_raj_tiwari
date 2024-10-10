@@ -36,7 +36,7 @@ function Footer() {
           <div className='h-8 w-8 rounded-full flex justify-center items-center bg-violet-500 mr-2'>
             <GrMail className='text-white' />
           </div>
-          <span className='text-white'>riteshrajtiwari.999@gmail.com</span>
+          <span className='text-white'>riteshrajtiwari.cse@gmail.com</span>
         </a>
       </div>
       <div className='text-center text-gray-400 text-sm p-2'>

@@ -1,15 +1,98 @@
-.parallax-effect-glare-scale
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 250px;
-    margin: 40px;
-    border-width: 2px;
-    border-style: solid;
-    border-image: linear-gradient(to right, rgba(0, 0, 139, 0.813), rgb(173, 96, 212) ) 1;
-    transform-style: preserve-3d;
-    
+.parallax-effect-glare-scale {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  margin: 40px;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, rgba(0, 0, 139, 0.813), rgb(173, 96, 212)) 1;
+  transform-style: preserve-3d;
+}
+
+/* Customize Swiper styles */
+.swiper-button-next,
+.swiper-button-prev {
+  background: transparent !important; /* Remove background */
+  color: teal; /* Change navigation button color */
+  font-size: 24px; /* Adjust the size of the navigation arrows */
+}
+
+.swiper-pagination-bullet {
+  background: teal; /* Change pagination bullet color */
+}
+
+.swiper-pagination-bullet-active {
+  background: orange; /* Active bullet color */
+}
+
+/* Optional: Add hover effects on cards */
+.swiper-slide {
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.overflow-x-auto::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* Internet Explorer and Edge */
+  scrollbar-width: none;      /* Firefox */
+}
+
+.certification-link {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding for a button-like feel */
+  background-color: #003366; /* Slightly lighter navy blue */
+  color: #ffffff; /* White text color for better contrast */
+  border-radius: 8px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.certification-link:hover {
+  background-color: #004080; /* Darker navy blue on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Swiper Styling for Achievements */
+.swiper_container {
+  padding: 50px 0; /* Adjust padding around the swiper */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: none !important; /* Ensures no background behind arrow */
+  box-shadow: none !important; /* Removes any shadow */
+  border-radius: 50%; /* Optional: make the buttons circular */
+  font-size: 18px;
+  color: #fff; /* White arrow color for better visibility */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #ff6600; /* Orange on hover */
+}
+
+.slider-arrow {
+  background: none !important; /* Ensure no background for arrows */
+  box-shadow: none !important; /* No shadow for cleaner look */
+}
+
+.swiper-pagination-bullet {
+  background: teal;
+}
+
+.swiper-pagination-bullet-active {
+  background: orange;
 }

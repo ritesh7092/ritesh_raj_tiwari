@@ -13,18 +13,21 @@ import python from "../assests/python.jpg";
 import pro1 from "../assests/tic-tac-toe-images.jpg";
 import pro2 from "../assests/musicimages.jpg";
 import medicare from "../assests/medicare.png"; // Import MediCare image
-import programmer from '../assests/programmer.jpg';
+import programmer from '../assests/programmer1.png';
 import codeforces from '../assests/codeforces.png';
 import codechef from '../assests/codechef.png';
 import leetcode from '../assests/leetcode.png';
 import metaCertificate from '../assests/meta-front-end.png';
 import certificateInternship from '../assests/certificate of internship coding ninja.jpeg'
+import codecombat from '../assests/codecombat.png'
+import adobezensolve from '../assests/adobezensolve.png'
 import cplusplus from '../assests/c++.png'
 import clang from '../assests/C.jpg'
 import java from '../assests/javaImg.png'
 import nextj from '../assests/nextjsImg.png'
 import sql from '../assests/SQL.jpeg'
 import mysql from '../assests/mySql.png'
+import nextjs from '../assests/nextJs.jpeg'
 
 
 const services = [ 
@@ -35,6 +38,10 @@ const services = [
     {
         title: "Web Developer",
         icon: web,
+    },
+    {
+        title: "NextJs Developer",
+        icon: nextjs,
     },
     {
         title: "React Developer",
@@ -182,16 +189,29 @@ const achievements = [
         icons: [codeforces, codechef, leetcode], // Add icons for competitive programming
     },
     {
-        title: "Coding Ninjas Certificate of Internship",
-        description: "Recognized for outstanding performance as a Campus Ambassador, hosting events and organizing contests that significantly enhanced participant engagement.",
-        icons: [certificateInternship], // Add the certificate image
-    },
-    {
         title: "Meta Front-End Developer Certification",
         description: "Completed all 9 modules, quizzes, and assignments with top grades, showcasing proficiency in front-end development.",
         icons: [metaCertificate], // Add the Meta certification image
-    }
+        link: "https://drive.google.com/file/d/1EQIAVIvnfMwB7u300ujV1_U0xpkoVozK/view?usp=sharing",
+    },
+    {
+        title: "Coding Ninjas Certificate of Internship",
+        description: "Recognized for outstanding performance as a Campus Ambassador.",
+        icons: [certificateInternship], // Add the certificate image
+        link: "https://drive.google.com/file/d/1AtlfvyFFZ6HZmh5_Bvix6kD3akf0vINq/view?usp=sharing",
+    },
+    {
+        title: "CodeCombat3",
+        description: "Achieved a rank of 450 out of over 15,000 participants in Coding Ninjas Code Combat 3, demonstrating strong problem-solving skills and competitive programming proficiency.",
+        icons: [codecombat], // Add the certificate image
+        link: "https://drive.google.com/file/d/1yLvqfxviaiMs9kqQo3vHEgqHoN0AC5om/view?usp=sharing",
+    },
+    {
+        title: "Adobe ZenSolve",
+        description: "Qualified for Round 2 of the Adobe GenSolve Hackathon after successfully clearing the first round, which involved a coding assessment, showcasing my technical skills and problem-solving abilities.",
+        icons: [adobezensolve], // Add the certificate image
+        link: "https://drive.google.com/file/d/1s9uzZyfdEOKJTZX1dRAk2i4zALyZydRt/view?usp=sharing",
+    },
 ];
-
 
 export { services, technology, projects, achievements };

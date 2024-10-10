@@ -8,12 +8,14 @@ import { SiGithub, SiNetlify } from 'react-icons/si';
 function Projects() {
   return (
     <div className='bg-gray-900 text-gray-100 py-10' id='Projects'>
-      <div className='p-3'>
-        <span className={Styles.sectionHeadText}>Projects</span>
-        <hr className='w-[35%] border-gray-700' />
-        <div className={Styles.sectionText}>
+      <div className='flex flex-col items-center p-3'>
+        <h2 className={`text-[#1D4ED8] md:text-[56px] sm:text-[48px] xs:text-[36px] text-[28px] font-semibold leading-tight transition-all duration-300 ease-in-out text-center`}>
+          Projects
+        </h2>
+        {/* Adjusted paragraph styling for better responsiveness */}
+        <p className={`w-3/4 justify-between mt-4 text-gray-500 text-[18px] leading-[28px] font-light transition-all duration-300 ease-in-out text-lg leading-relaxed text-center px-4`}>
           Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
-        </div>
+        </p>
       </div>
 
       <div className='flex flex-wrap p-8 justify-evenly items-center'>
