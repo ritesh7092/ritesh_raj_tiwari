@@ -85,54 +85,52 @@ function Contact() {
                   Send Message
                 </button>
               ) : (
-                <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
-                  <label className='flex flex-col gap-1'>
-                    <span className='text-teal-400 font-medium'>Your Name</span>
-                    <input
-                      type='text'
-                      name='name'
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Your Name"
-                      className='bg-gray-800 py-2 px-4 placeholder-gray-500 text-gray-300 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400'
-                    />
-                  </label>
-
-                  <label className='flex flex-col gap-1'>
-                    <span className='text-teal-400 font-medium'>Your Email</span>
-                    <input
-                      type='email'
-                      name='email'
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Your Email"
-                      className='bg-gray-800 py-2 px-4 placeholder-gray-500 text-gray-300 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400'
-                    />
-                  </label>
-
-                  <label className='flex flex-col gap-1'>
-                    <span className='text-teal-400 font-medium'>Your Message</span>
-                    <textarea
-                      rows={5}
-                      name='message'
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder='Your Message'
-                      className='bg-gray-800 py-2 px-4 placeholder-gray-500 text-gray-300 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400'
-                    />
-                  </label>
-
-                  <button
-                    type='submit'
-                    className='bg-teal-500 hover:bg-teal-400 py-2 rounded-lg shadow-md transition-all duration-300 text-white font-semibold'
-                    disabled={isCooldown}
-                  >
-                    Submit
-                  </button>
-                  {isCooldown && (
-                    <p className="text-red-400 text-sm mt-2">Please wait for a minute before submitting again.</p>
-                  )}
-                </form>
+                <div className="flex-[0.75] bg-gray-800 p-8 rounded-2xl">
+                  <p className="sm:text-[18px] text-[14px] text-teal-400 uppercase tracking-wider">Get in touch</p>
+                  <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact.</h3>
+                  <form className="mt-12 flex flex-col gap-8" onSubmit={handleSubmit}>
+                    <label className="flex flex-col">
+                      <span className="text-white font-medium mb-4">Your Name</span>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="What's your good name?"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="bg-gray-700 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                      />
+                    </label>
+                    <label className="flex flex-col">
+                      <span className="text-white font-medium mb-4">Your email</span>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="What's your web address?"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="bg-gray-700 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                      />
+                    </label>
+                    <label className="flex flex-col">
+                      <span className="text-white font-medium mb-4">Your Message</span>
+                      <textarea
+                        rows={7}
+                        name="message"
+                        placeholder="What you want to say?"
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="bg-gray-700 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                      />
+                    </label>
+                    <button
+                      type="submit"
+                      className="bg-teal-500 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+                      disabled={isCooldown}
+                    >
+                      Send
+                    </button>
+                  </form>
+                </div>
               )}
             </>
           ) : (
@@ -145,6 +143,11 @@ function Contact() {
 }
 
 export default Contact;
+
+
+
+
+
 
 
 

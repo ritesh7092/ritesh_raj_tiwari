@@ -12,6 +12,8 @@
   transform-style: preserve-3d;
 }
 
+
+
 /* Customize Swiper styles */
 .swiper-button-next,
 .swiper-button-prev {
@@ -96,3 +98,5 @@
 .swiper-pagination-bullet-active {
   background: orange;
 }
+
+

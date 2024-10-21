@@ -11,4 +11,7 @@ const Styles = {
         "mt-4 pl-8 text-gray-500 text-[18px] leading-[28px] max-w-3xl font-light transition-all duration-300 ease-in-out", // Light Gray with slight reduction in font size for better readability
 };
 
+
+
+
 export { Styles };

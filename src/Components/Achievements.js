@@ -18,9 +18,20 @@ const Achievements = () => {
         
         {/* Header */}
         <div className='flex-row items-center justify-center pt-3 text-center'>
-          <span className='text-3xl font-bold text-teal-400 sm:text-2xl'>Achievements</span>
-          <hr className='w-[35%] border-gray-700 my-2 mx-auto' />
-        </div>
+  <span
+    className='text-3xl font-bold text-teal-400 sm:text-2xl lg:text-4xl xl:text-5xl' // Increased sizes for larger screens
+    style={{
+      background: "linear-gradient(to right, #ff4a57, #1D4ED8)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      fontFamily: "Poppins, sans-serif",
+    }}
+  >
+    Achievements
+  </span>
+  <hr className='w-[35%] border-gray-700 my-2 mx-auto' />
+</div>
+
 
         {/* Swiper for Achievements */}
         <Swiper
