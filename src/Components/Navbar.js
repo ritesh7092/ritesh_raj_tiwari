@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { AiOutlineMenuUnfold, AiOutlineClose } from 'react-icons/ai';
-import { Link } from 'react-scroll';
+import React, { useState, useEffect, useRef } from "react";
+import { AiOutlineMenuUnfold, AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [clickedItem, setClickedItem] = useState('');
+  const [clickedItem, setClickedItem] = useState("");
   const menuRef = useRef(null);
 
   const toggleMenu = () => {
@@ -14,7 +14,7 @@ function Navbar() {
   const handleClick = (item) => {
     setClickedItem(item);
     setIsOpen(false); // Close the menu when an item is clicked
-    setTimeout(() => setClickedItem(''), 800);
+    setTimeout(() => setClickedItem(""), 800);
   };
 
   // Close the menu when clicking outside of it
@@ -25,83 +25,92 @@ function Navbar() {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   return (
-    <nav className='fixed w-full z-20 top-0 bg-gradient-to-r from-blue-800 to-sky-500 shadow-lg'>
-      <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-        <div className='flex flex-row'>
-          <h2 className='text-white text-2xl font-bold ml-4 hover:text-yellow-300 transition duration-300'>
+    <nav className="fixed w-full z-20 top-0 bg-gradient-to-r from-blue-800 to-sky-500 shadow-lg">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="flex flex-row">
+          <h2
+            className="text-white text-2xl font-bold ml-4 hover:text-yellow-300 transition duration-300 cursor-pointer"
+            onClick={() => (window.location.href = "/")}
+          >
             <b>Ritesh</b>
           </h2>
         </div>
-        <div className='flex md:order-2 bg-blue-600 rounded-lg md:hidden focus:ring-2'>
+        <div className="flex md:order-2 bg-blue-600 rounded-lg md:hidden focus:ring-2">
           <button
             onClick={toggleMenu}
-            className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg focus:ring-2 focus:ring-gray-300 hover:bg-blue-500 transition duration-300'
-            aria-label='Toggle menu'
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg focus:ring-2 focus:ring-gray-300 hover:bg-blue-500 transition duration-300"
+            aria-label="Toggle menu"
           >
             {isOpen ? (
-              <AiOutlineClose className='text-white text-lg' />
+              <AiOutlineClose className="text-white text-lg" />
             ) : (
-              <AiOutlineMenuUnfold className='text-white text-lg' />
+              <AiOutlineMenuUnfold className="text-white text-lg" />
             )}
           </button>
         </div>
-        
+
         {/* Right-side vertical menu for small screens */}
         <div
           ref={menuRef}
           className={`fixed top-0 right-0 h-auto w-80 bg-gradient-to-br from-blue-700 to-sky-400 bg-opacity-90 backdrop-blur-md shadow-lg rounded-l-xl transition-transform duration-500 ease-in-out ${
-            isOpen ? 'transform translate-x-0' : 'transform translate-x-full'
+            isOpen ? "transform translate-x-0" : "transform translate-x-full"
           } md:hidden`}
         >
           {/* Close Icon at the top-right corner */}
           {isOpen && (
             <button
               onClick={toggleMenu}
-              className='absolute top-4 right-4 p-2 text-white rounded-full hover:bg-blue-500 transition duration-300'
-              aria-label='Close menu'
+              className="absolute top-4 right-4 p-2 text-white rounded-full hover:bg-blue-500 transition duration-300"
+              aria-label="Close menu"
             >
-              <AiOutlineClose className='text-2xl' />
+              <AiOutlineClose className="text-2xl" />
             </button>
           )}
 
-          <ul className='flex flex-col p-6 mt-12 space-y-4'>
-            {['Home', 'Overview', 'Projects', 'Achievements', 'Contact'].map((item) => (
-              <Link
-                key={item}
-                spy={true}
-                to={item}
-                activeClass='activeClass'
-                onClick={() => handleClick(item)}
-              >
-                <li
-                  className={`flex items-center justify-center py-4 px-6 bg-white bg-opacity-10 rounded-lg shadow-lg transition duration-300 transform hover:bg-opacity-20 hover:scale-105 ${
-                    clickedItem === item ? 'bg-blue-600' : ''
-                  }`}
+          <ul className="flex flex-col p-6 mt-12 space-y-4">
+            {["Home", "Overview", "Projects", "Achievements", "Contact"].map(
+              (item) => (
+                <Link
+                  key={item}
+                  spy={true}
+                  to={item}
+                  activeClass="activeClass"
+                  onClick={() => handleClick(item)}
                 >
-                  <span className='text-white'>{item}</span>
-                </li>
-              </Link>
-            ))}
+                  <li
+                    className={`flex items-center justify-center py-4 px-6 bg-white bg-opacity-10 rounded-lg shadow-lg transition duration-300 transform hover:bg-opacity-20 hover:scale-105 ${
+                      clickedItem === item ? "bg-blue-600" : ""
+                    }`}
+                  >
+                    <span className="text-white">{item}</span>
+                  </li>
+                </Link>
+              )
+            )}
           </ul>
         </div>
-        
+
         {/* Menu for large screens */}
-        <div className={`hidden md:flex md:items-center md:space-x-8 md:order-1`}>
-          <ul className='flex flex-row md:p-0 text-lg text-white'>
-            {['Home', 'Overview', 'Projects', 'Achievements', 'Contact'].map((item) => (
-              <Link key={item} spy={true} to={item} activeClass='activeClass'>
-                <li className='py-4 px-6 hover:text-yellow-300 transition duration-300 cursor-pointer'>
-                  {item}
-                </li>
-              </Link>
-            ))}
+        <div
+          className={`hidden md:flex md:items-center md:space-x-8 md:order-1`}
+        >
+          <ul className="flex flex-row md:p-0 text-lg text-white">
+            {["Home", "Overview", "Projects", "Achievements", "Contact"].map(
+              (item) => (
+                <Link key={item} spy={true} to={item} activeClass="activeClass">
+                  <li className="py-4 px-6 hover:text-yellow-300 transition duration-300 cursor-pointer">
+                    {item}
+                  </li>
+                </Link>
+              )
+            )}
           </ul>
         </div>
       </div>
@@ -110,15 +119,6 @@ function Navbar() {
 }
 
 export default Navbar;
-
-
-
-
-
-
-
-
-
 
 // import React, { useState } from 'react';
 // import { AiOutlineMenuUnfold } from 'react-icons/ai';
@@ -242,12 +242,6 @@ export default Navbar;
 
 // export default Navbar;
 
-
-
-
-
-
-
 // import React, { useState } from 'react';
 // import { AiOutlineMenuUnfold } from 'react-icons/ai';
 // import { Link } from 'react-scroll';
@@ -308,5 +302,3 @@ export default Navbar;
 // }
 
 // export default Navbar;
-
-
