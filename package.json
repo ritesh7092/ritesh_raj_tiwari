@@ -1,5 +1,4 @@
 {
-  "homepage": "https://ritesh7092.github.io/myself_ritesh",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -29,8 +28,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -55,7 +52,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.2.0",
     "tailwindcss": "^3.4.3"
   }
 }
