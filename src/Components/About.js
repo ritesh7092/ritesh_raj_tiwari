@@ -75,7 +75,7 @@ export default About;
 // import React, { useState, useEffect } from "react";
 // import Profile from "../assests/profile.png";
 // import { Styles } from "../utils/Style";
-// import Resume from "../assests/Resume (7).pdf";
+// import Resume from "../assests/resume1.pdf";
 // import { TiArrowDownOutline } from "react-icons/ti";
 // import "../App.css";
 
