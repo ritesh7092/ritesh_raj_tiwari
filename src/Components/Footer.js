@@ -30,7 +30,7 @@ function Footer() {
         </a>
 
         <a
-          href='mailto:riteshrajtiwari.999@gmail.com'
+          href='mailto:riteshrajtiwari.cse@gmail.com'
           className='flex items-center text-sm text-violet-300 hover:text-violet-400 transition duration-300'
         >
           <div className='h-8 w-8 rounded-full flex justify-center items-center bg-violet-500 mr-2'>
