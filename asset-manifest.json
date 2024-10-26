@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ritesh_raj_tiwari/static/css/main.0384c58d.css",
-    "main.js": "/ritesh_raj_tiwari/static/js/main.a5079ad2.js",
+    "main.js": "/ritesh_raj_tiwari/static/js/main.b7121a36.js",
     "static/js/453.1407b060.chunk.js": "/ritesh_raj_tiwari/static/js/453.1407b060.chunk.js",
     "static/media/medicare.png": "/ritesh_raj_tiwari/static/media/medicare.cbde5b4630ccbecad784.png",
     "static/media/programmer1.png": "/ritesh_raj_tiwari/static/media/programmer1.dab6e8b7617889534a01.png",
@@ -28,11 +28,11 @@
     "static/media/slick.woff": "/ritesh_raj_tiwari/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ritesh_raj_tiwari/index.html",
     "main.0384c58d.css.map": "/ritesh_raj_tiwari/static/css/main.0384c58d.css.map",
-    "main.a5079ad2.js.map": "/ritesh_raj_tiwari/static/js/main.a5079ad2.js.map",
+    "main.b7121a36.js.map": "/ritesh_raj_tiwari/static/js/main.b7121a36.js.map",
     "453.1407b060.chunk.js.map": "/ritesh_raj_tiwari/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0384c58d.css",
-    "static/js/main.a5079ad2.js"
+    "static/js/main.b7121a36.js"
   ]
 }
