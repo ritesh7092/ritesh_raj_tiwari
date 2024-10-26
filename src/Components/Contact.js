@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Styles } from '../utils/Style';
+import { ArrowUpIcon } from '@heroicons/react/24/solid';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -61,6 +62,13 @@ function Contact() {
       });
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className='bg-gray-900 text-gray-100 py-10' id='Contact'>
       <div className='flex flex-col items-center mb-6'>
@@ -74,7 +82,7 @@ function Contact() {
         <div className='lg:w-[40%] p-5'>
           {!formSubmitted ? (
             <div className="flex-[0.75] bg-gray-800 p-8 rounded-2xl">
-              <p className="sm:text-[18px] text-[14px] text-teal-400 uppercase tracking-wider">Get in touch</p>
+              <p className="sm:text-[18px] text-[14px] text-blue-400 uppercase tracking-wider">Get in touch</p>
               <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact.</h3>
               <form className="mt-12 flex flex-col gap-8" onSubmit={handleSubmit}>
                 <label className="flex flex-col">
@@ -115,7 +123,7 @@ function Contact() {
                 </label>
                 <button
                   type="submit"
-                  className="bg-teal-500 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+                  className="bg-gradient-to-r from-blue-500 to-teal-500 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md hover:from-blue-400 hover:to-teal-400 transition-all duration-300 transform hover:scale-105"
                   disabled={isCooldown}
                 >
                   Send
@@ -127,11 +135,27 @@ function Contact() {
           )}
         </div>
       </div>
+
+      {/* Scroll-to-top button with gradient and shadow styling, adjusted for small screens */}
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 sm:right-15 p-2 rounded-full shadow-lg transition duration-300 transform hover:scale-110"
+        style={{
+          background: "linear-gradient(135deg, #38bdf8, #06b6d4, #3b82f6)",
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)"
+        }}
+        aria-label="Scroll to top"
+      >
+        <ArrowUpIcon className="h-6 w-6 text-white" />
+      </button>
     </div>
   );
 }
 
 export default Contact;
+
+
+
 
 
 
