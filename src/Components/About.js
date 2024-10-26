@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Profile from "../assests/profile.png";
 import { Styles } from "../utils/Style";
-import { TiArrowRightOutline } from "react-icons/ti"; // Changed the icon to an arrow pointing right for Hire Me
+import { TiArrowRightOutline } from "react-icons/ti";
 import "../App.css";
 
 function About() {
@@ -17,6 +17,13 @@ function About() {
 
     return () => clearInterval(interval);
   }, [index, interests]);
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("Contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="flex flex-wrap justify-center items-center py-16 lg:py-24" id="Home">
@@ -38,12 +45,13 @@ function About() {
         {/* Adjust spacing for the hire me button */}
         <br />
         <div className="w-[14rem] mt-2 sm:mt-4">
-          <a href="#Contact" rel="noreferrer"> {/* Changed href to #Contact to redirect to the contact section */}
-            <div className="p-4 w-[13rem] rounded-xl bg-gradient-to-r from-[#FF6B00] to-[#FFB200] text-white flex justify-center items-center border-2 border-transparent hover:border-violet-500 shadow-lg hover:shadow-violet-500 transform transition-transform duration-300 ease-in-out hover:scale-105">
-              <TiArrowRightOutline className="text-lg mr-3 mt-1" /> {/* Changed icon */}
-              <span className="font-semibold text-lg">Get in Touch</span> {/* Changed text */}
-            </div>
-          </a>
+          <button
+            onClick={scrollToContact}
+            className="p-4 w-[13rem] rounded-xl bg-gradient-to-r from-[#FF6B00] to-[#FFB200] text-white flex justify-center items-center border-2 border-transparent hover:border-violet-500 shadow-lg hover:shadow-violet-500 transform transition-transform duration-300 ease-in-out hover:scale-105"
+          >
+            <TiArrowRightOutline className="text-lg mr-3 mt-1" />
+            <span className="font-semibold text-lg">Get in Touch</span>
+          </button>
         </div>
       </div>
 

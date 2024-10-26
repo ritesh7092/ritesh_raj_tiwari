@@ -37,7 +37,10 @@ function Navbar() {
         <div className="flex flex-row">
           <h2
             className="text-white text-2xl font-bold ml-4 hover:text-yellow-300 transition duration-300 cursor-pointer"
-            onClick={() => (window.location.href = "/")}
+            onClick={() => {
+              handleClick("Home"); // Update this line to refresh the page
+              window.location.reload(); // Add this line to refresh the page
+            }}
           >
             <b>Ritesh</b>
           </h2>
@@ -63,7 +66,6 @@ function Navbar() {
             isOpen ? "transform translate-x-0" : "transform translate-x-full"
           } md:hidden`}
         >
-          {/* Close Icon at the top-right corner */}
           {isOpen && (
             <button
               onClick={toggleMenu}
@@ -119,6 +121,9 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+
 
 // import React, { useState } from 'react';
 // import { AiOutlineMenuUnfold } from 'react-icons/ai';
