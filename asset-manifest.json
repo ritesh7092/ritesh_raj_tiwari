@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/ritesh_raj_tiwari/static/css/main.0384c58d.css",
-    "main.js": "/ritesh_raj_tiwari/static/js/main.b7121a36.js",
-    "static/js/453.1407b060.chunk.js": "/ritesh_raj_tiwari/static/js/453.1407b060.chunk.js",
+    "main.css": "/ritesh_raj_tiwari/static/css/main.43245e0e.css",
+    "main.js": "/ritesh_raj_tiwari/static/js/main.44674e0b.js",
+    "static/js/453.ace21015.chunk.js": "/ritesh_raj_tiwari/static/js/453.ace21015.chunk.js",
     "static/media/medicare.png": "/ritesh_raj_tiwari/static/media/medicare.cbde5b4630ccbecad784.png",
     "static/media/programmer1.png": "/ritesh_raj_tiwari/static/media/programmer1.dab6e8b7617889534a01.png",
     "static/media/codecombat.png": "/ritesh_raj_tiwari/static/media/codecombat.bfb2479d666014f8deef.png",
     "static/media/adobezensolve.png": "/ritesh_raj_tiwari/static/media/adobezensolve.256add8634b08e33a5c6.png",
     "static/media/meta-front-end.png": "/ritesh_raj_tiwari/static/media/meta-front-end.321d49b5b585aef95ca1.png",
+    "static/media/better.png": "/ritesh_raj_tiwari/static/media/better.6ca0c24e578ceccd9501.png",
     "static/media/profile.png": "/ritesh_raj_tiwari/static/media/profile.94142361db178d3d3ad9.png",
     "static/media/certificate of internship coding ninja.jpeg": "/ritesh_raj_tiwari/static/media/certificate of internship coding ninja.40f93d054ef93d46694d.jpeg",
     "static/media/codechef.png": "/ritesh_raj_tiwari/static/media/codechef.e70be7121ff1cd44caaf.png",
@@ -27,12 +28,12 @@
     "static/media/slick.ttf": "/ritesh_raj_tiwari/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/ritesh_raj_tiwari/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ritesh_raj_tiwari/index.html",
-    "main.0384c58d.css.map": "/ritesh_raj_tiwari/static/css/main.0384c58d.css.map",
-    "main.b7121a36.js.map": "/ritesh_raj_tiwari/static/js/main.b7121a36.js.map",
-    "453.1407b060.chunk.js.map": "/ritesh_raj_tiwari/static/js/453.1407b060.chunk.js.map"
+    "main.43245e0e.css.map": "/ritesh_raj_tiwari/static/css/main.43245e0e.css.map",
+    "main.44674e0b.js.map": "/ritesh_raj_tiwari/static/js/main.44674e0b.js.map",
+    "453.ace21015.chunk.js.map": "/ritesh_raj_tiwari/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0384c58d.css",
-    "static/js/main.b7121a36.js"
+    "static/css/main.43245e0e.css",
+    "static/js/main.44674e0b.js"
   ]
 }
