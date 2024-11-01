@@ -13,6 +13,7 @@ import python from "../assests/python.jpg";
 import pro1 from "../assests/tic-tac-toe-images.jpg";
 import pro2 from "../assests/musicimages.jpg";
 import medicare from "../assests/medicare.png"; // Import MediCare image
+import better from "../assests/better.png"
 import programmer from '../assests/programmer1.png';
 import codeforces from '../assests/codeforces.png';
 import codechef from '../assests/codechef.png';
@@ -119,6 +120,28 @@ const technology = [
 
 const projects = [
     {
+        name: "MediCare",
+        description:
+        "A full-stack appointment booking system built with Next.js, Appwrite, TypeScript, TailwindCSS, ShadCN, and Twilio.",
+        tags: [
+            {
+                name: "Next.js",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Appwrite",
+                color: "green-text-gradient",
+            },
+            {
+                name: "TailwindCSS",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: medicare, // Use the imported MediCare image
+        source_code_link: "https://github.com/ritesh7092/MediCare_Appointment",
+        source_deploy_link: "https://ritesh-medi-care-appointment-vaf9.vercel.app/",
+    },
+    {
         name: "Tic-Tac-Toe",
         description:
         "Web application made using React styled with CSS. It's a two-player Tic-Tac-Toe game.",
@@ -159,26 +182,23 @@ const projects = [
         source_deploy_link: "https://musiplay.netlify.app/",
     },
     {
-        name: "MediCare",
+        name: "Better(Clone)",
         description:
-        "A full-stack appointment booking system built with Next.js, Appwrite, TypeScript, TailwindCSS, ShadCN, and Twilio.",
+        "A responsive multi-page web application replicating the design and functionality of Better.com",
         tags: [
             {
                 name: "Next.js",
                 color: "blue-text-gradient",
             },
-            {
-                name: "Appwrite",
-                color: "green-text-gradient",
-            },
+            
             {
                 name: "TailwindCSS",
                 color: "pink-text-gradient",
             },
         ],
-        image: medicare, // Use the imported MediCare image
-        source_code_link: "https://github.com/ritesh7092/MediCare_Appointment",
-        source_deploy_link: "https://ritesh-medi-care-appointment-vaf9.vercel.app/",
+        image: better, // Use the imported MediCare image
+        source_code_link: "https://github.com/ritesh7092/Assignment1",
+        source_deploy_link: "https://modusbetterritesh.vercel.app/",
     },
 ];
 
@@ -214,4 +234,21 @@ const achievements = [
     },
 ];
 
-export { services, technology, projects, achievements };
+const certificates = [
+    {
+      title: "Introduction to Front-End Development",
+      description: "A comprehensive certification ...",
+      icon: metaCertificate,
+      link: "https://drive.google.com/file/d/1EQIAVIvnfMwB7u300ujV1_U0xpkoVozK/view?usp=sharing",
+    },
+    {
+      title: "Coding Ninjas Certificate of Internship",
+      description: "Recognized for outstanding performance...",
+      icon: certificateInternship,
+      link: "https://drive.google.com/file/d/1AtlfvyFFZ6HZmh5_Bvix6kD3akf0vINq/view?usp=sharing",
+    },
+    // Add additional certificates as needed...
+  ];
+  
+
+export { services, technology, projects, achievements, certificates };
