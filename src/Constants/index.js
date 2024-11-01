@@ -10,6 +10,7 @@ import git from "../assests/git.png";
 import nodejs from "../assests/node-js.png";
 import mongodb from "../assests/mongodb.jpg";
 import python from "../assests/python.jpg";
+import myportfolio from "../assests/myportfolio.png"
 import pro1 from "../assests/tic-tac-toe-images.jpg";
 import pro2 from "../assests/musicimages.jpg";
 import medicare from "../assests/medicare.png"; // Import MediCare image
@@ -119,6 +120,28 @@ const technology = [
 ];
 
 const projects = [
+    {
+        name: "Portfolio",
+        description:
+"My React.js portfolio uses Tailwind CSS for styling, Google Forms for messaging, TS Particles for a dynamic background, and Swiper for showcasing achievements smoothly.",
+        tags: [
+            {
+                name: "React",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "GoogleForm",
+                color: "green-text-gradient",
+            },
+            {
+                name: "TailwindCSS",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: myportfolio, // Use the imported MediCare image
+        source_code_link: "https://github.com/ritesh7092/ritesh_raj_tiwari",
+        source_deploy_link: "https://ritesh7092.github.io/ritesh_raj_tiwari/",
+    },
     {
         name: "MediCare",
         description:
